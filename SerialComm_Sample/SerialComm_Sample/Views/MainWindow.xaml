@@ -14,7 +14,7 @@
         <!--行の定義-->
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
-            <RowDefinition Height="4*" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
@@ -45,11 +45,12 @@
                 FontSize="14"
                 FontWeight="Bold"
                 Margin="5" />
-        <TextBlock Grid.Column="0"
-                   Grid.Row="1"
-                   Grid.ColumnSpan="3"
-                   Text="{Binding RecvMessage}"
-                   Background="LightGray"
-                   Margin="10" />
+        <TextBox Grid.Column="0"
+                 Grid.Row="1"
+                 Grid.ColumnSpan="3"
+                 VerticalScrollBarVisibility="Visible"
+                 Background="LightGray"
+                 Margin="10"
+                 Text="{Binding RecvMessage}"/>
     </Grid>
 </Window>

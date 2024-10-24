@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.IO.Ports;
+using System.Linq;
 using System.Text;
 using System.Windows;
 
@@ -56,6 +57,7 @@ namespace SerialComm_Sample.Models
             {
                 PortList.Add( port );
             }
+            SelectedPort = PortList.FirstOrDefault( );
         }
 
         public void Connect( )
