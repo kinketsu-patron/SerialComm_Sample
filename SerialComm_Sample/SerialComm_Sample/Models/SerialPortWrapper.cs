@@ -35,7 +35,6 @@ namespace SerialComm_Sample.Models
             m_SerialPort.Encoding = Encoding.UTF8;
             m_SerialPort.WriteTimeout = 5000;
             m_SerialPort.ReadTimeout = 5000;
-            m_SerialPort.DtrEnable = true;
 
             m_SerialPort.DataReceived += ( sender, e ) =>
             {
@@ -47,7 +46,8 @@ namespace SerialComm_Sample.Models
                     {
                         p_MessageProvider.SetMessage( message );
                     } );
-                } catch ( Exception ex )
+                }
+                catch ( Exception ex )
                 {
                     MessageBox.Show( ex.Message );
                 }
@@ -66,7 +66,8 @@ namespace SerialComm_Sample.Models
             {
                 m_SerialPort.PortName = SelectedPort;
                 m_SerialPort.Open( );
-            } catch ( Exception ex )
+            }
+            catch ( Exception ex )
             {
                 MessageBox.Show( ex.Message );
             }
@@ -77,7 +78,8 @@ namespace SerialComm_Sample.Models
             try
             {
                 m_SerialPort.Close( );
-            } catch ( Exception ex )
+            }
+            catch ( Exception ex )
             {
                 MessageBox.Show( ex.Message );
             }
